@@ -6,13 +6,13 @@ const cors = require("cors");
 const logger = require("morgan");
 const http = require("http").createServer(app);
 const { Server } = require("socket.io");
-const { authMiddleware } = require("../BE/middleware/authenticate");
+const { authMiddleware } = require("../platinum_new/middleware/authenticate");
 const {
     getChat,
     getChatAdmin,
     getDetailChat,
     create,
-} = require("../BE/controllers/chat.controller");
+} = require("../platinum_new/controllers/chat.controller");
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger_output.json');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
